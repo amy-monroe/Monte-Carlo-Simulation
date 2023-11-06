@@ -4,7 +4,7 @@
 
 ## Overview
 
-Monte Carlo simulations represent a powerful statistical technique, combining stochastic processes and mathematical modeling to estimate complex scenarios. In this context, stochastic processes involve random, probabilistic phenomena evolving over time or iterations. This simulation serves the purpose of approximating the value of Pi (π) using a Monte Carlo approach.
+Monte Carlo simulations represent a powerful statistical technique, combining stochastic processes and mathematical modeling to estimate complex scenarios. In this context, stochastic processes involve random, probabilistic phenomena evolving over time or iterations. This simulation was made with vanilla Javascript and serves the purpose of approximating the value of Pi (π) using a Monte Carlo approach.
 
 ## Estimation Formula
 
