@@ -1,136 +1,155 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Monte Carlo Simulation</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-
-    #simulationCanvas {
-      border: 2px solid #000;
-      margin: 20px auto;
-    }
-
-    #piValue {
-      font-size: 20px;
-      margin-top: 10px;
-    }
-
-    #buttons {
-      margin-top: 20px;
-    }
-
-    .button {
-      background-color: #007BFF;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-right: 10px;
-    }
-
-    .button:hover {
-      background-color: #0056b3;
-    }
-
-    #explanation {
-      text-align: left;
-      margin: 20px auto;
-      max-width: 600px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Monte Carlo Simulation</h1>
-  <canvas id="simulationCanvas" width="400" height="400"></canvas>
-  <p id="piValue">Estimated Pi: ?</p>
-  <div id="buttons">
-    <button class="button" id="realTime">Start Real Time</button>
-    <button class="button" id="instantResults">Instant Results</button>
-    <button class="button" id="clearCanvas">Clear Canvas</button>
-  </div>
-  <div id="explanation">
-    <h2>What is a Monte Carlo Simulation?</h2>
-    <p>A Monte Carlo simulation is a statistical technique that uses random sampling and mathematical modeling to estimate the outcomes of various scenarios. It is named after the Monte Carlo Casino in Monaco, known for games of chance and randomness.</p>
-    <p>In this simulation, we estimate the value of Pi (π) by randomly generating points within a unit square and checking if they fall inside a unit circle. The ratio of points inside the circle to the total number of points generated provides an approximation of Pi.</p>
-    <h2>How It Works</h2>
-    <p>The formula used for this estimation is:</p>
-    <p style="font-family: 'Courier New', monospace; font-size: 16px;">π ≈ 4 * (Number of Points Inside the Circle) / (Total Number of Points Generated)</p>
-    <p>The purpose of this simulation is to demonstrate the power of randomness and the use of Monte Carlo methods in solving complex problems in various fields, including finance, engineering, and science.</p>
-  </div>
-
-  <script>
-    const canvas = document.getElementById('simulationCanvas');
-    const ctx = canvas.getContext('2d');
-
-    let insideCircle = 0;
-    let totalPoints = 0;
-    let estimatedPi = 0;
-    let interval = null;
-    let isRealTime = false; 
-
-    function monteCarloStep() {
-      const x = Math.random();
-      const y = Math.random();
-      totalPoints++;
-
-      if (x * x + y * y <= 1) {
-        insideCircle++;
-        ctx.fillStyle = 'blue';
-      } else {
-        ctx.fillStyle = 'red';
+  <head>
+    <title>Monte Carlo Simulation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
       }
 
-      const xPos = x * canvas.width;
-      const yPos = (1 - y) * canvas.height;
-      ctx.fillRect(xPos, yPos, 1, 1);
+      #simulationCanvas {
+        border: 2px solid #000;
+        margin: 20px auto;
+      }
 
-      estimatedPi = (insideCircle / totalPoints) * 4;
-      document.getElementById('piValue').textContent = `Estimated Pi: ${estimatedPi.toFixed(6)}`;
-    }
+      #piValue {
+        font-size: 20px;
+        margin-top: 10px;
+      }
 
-    function toggleRealTime() {
-      if (isRealTime) {
+      #buttons {
+        margin-top: 20px;
+      }
+
+      .button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+
+      .button:hover {
+        background-color: #0056b3;
+      }
+
+      #explanation {
+        text-align: left;
+        margin: 20px auto;
+        max-width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Monte Carlo Simulation</h1>
+    <canvas id="simulationCanvas" width="400" height="400"></canvas>
+    <p id="piValue">Estimated Pi: ?</p>
+    <div id="buttons">
+      <button class="button" id="realTime">Start Real Time</button>
+      <button class="button" id="instantResults">Instant Results</button>
+      <button class="button" id="clearCanvas">Clear Canvas</button>
+    </div>
+    <div id="explanation">
+      <h2>What is a Monte Carlo Simulation?</h2>
+      <p>
+        A Monte Carlo simulation is a statistical technique that uses random
+        sampling and mathematical modeling to estimate the outcomes of various
+        scenarios. It is named after the Monte Carlo Casino in Monaco, known for
+        games of chance and randomness.
+      </p>
+      <p>
+        In this simulation, we estimate the value of Pi (π) by randomly
+        generating points within a unit square and checking if they fall inside
+        a unit circle. The ratio of points inside the circle to the total number
+        of points generated provides an approximation of Pi.
+      </p>
+      <h2>How It Works</h2>
+      <p>The formula used for this estimation is:</p>
+      <p style="font-family: 'Courier New', monospace; font-size: 16px">
+        π ≈ 4 * (Number of Points Inside the Circle) / (Total Number of Points
+        Generated)
+      </p>
+      <p>
+        The purpose of this simulation is to demonstrate the power of randomness
+        and the use of Monte Carlo methods in solving complex problems in
+        various fields, including finance, engineering, and science.
+      </p>
+    </div>
+
+    <script>
+      const canvas = document.getElementById("simulationCanvas");
+      const ctx = canvas.getContext("2d");
+
+      let insideCircle = 0;
+      let totalPoints = 0;
+      let estimatedPi = 0;
+      let interval = null;
+      let isRealTime = false;
+
+      function monteCarloStep() {
+        const x = Math.random();
+        const y = Math.random();
+        totalPoints++;
+
+        if (x * x + y * y <= 1) {
+          insideCircle++;
+          ctx.fillStyle = "blue";
+        } else {
+          ctx.fillStyle = "red";
+        }
+
+        const xPos = x * canvas.width;
+        const yPos = (1 - y) * canvas.height;
+        ctx.fillRect(xPos, yPos, 1, 1);
+
+        estimatedPi = (insideCircle / totalPoints) * 4;
+        document.getElementById(
+          "piValue"
+        ).textContent = `Estimated Pi: ${estimatedPi.toFixed(6)}`;
+      }
+
+      function toggleRealTime() {
+        if (isRealTime) {
+          clearInterval(interval);
+          document.getElementById("realTime").textContent = "Start Real Time";
+        } else {
+          interval = setInterval(monteCarloStep, 1);
+          document.getElementById("realTime").textContent = "Pause";
+        }
+        isRealTime = !isRealTime;
+      }
+
+      function showInstantResults() {
+        if (interval) {
+          clearInterval(interval);
+        }
+
+        for (let i = totalPoints; i < 10000; i++) {
+          monteCarloStep();
+        }
+      }
+
+      function clearCanvas() {
         clearInterval(interval);
-        document.getElementById('realTime').textContent = 'Start Real Time';
-      } else {
-        interval = setInterval(monteCarloStep, 1);
-        document.getElementById('realTime').textContent = 'Pause';
-      }
-      isRealTime = !isRealTime;
-    }
-
-    function showInstantResults() {
-      if (interval) {
-        clearInterval(interval);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        insideCircle = 0;
+        totalPoints = 0;
+        estimatedPi = 0;
+        document.getElementById("piValue").textContent = "Estimated Pi: ?";
       }
 
-      for (let i = totalPoints; i < 10000; i++) {
-        monteCarloStep();
-      }
-    }
+      const realTimeButton = document.getElementById("realTime");
+      const instantResultsButton = document.getElementById("instantResults");
+      const clearCanvasButton = document.getElementById("clearCanvas");
 
-    function clearCanvas() {
-      clearInterval(interval);
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      insideCircle = 0;
-      totalPoints = 0;
-      estimatedPi = 0;
-      document.getElementById('piValue').textContent = 'Estimated Pi: ?';
-    }
+      realTimeButton.addEventListener("click", toggleRealTime);
+      instantResultsButton.addEventListener("click", showInstantResults);
+      clearCanvasButton.addEventListener("click", clearCanvas);
 
-    const realTimeButton = document.getElementById('realTime');
-    const instantResultsButton = document.getElementById('instantResults');
-    const clearCanvasButton = document.getElementById('clearCanvas');
-
-    realTimeButton.addEventListener('click', toggleRealTime);
-    instantResultsButton.addEventListener('click', showInstantResults);
-    clearCanvasButton.addEventListener('click', clearCanvas);
-
-    clearCanvas();
-  </script>
-</body>
+      clearCanvas();
+    </script>
+  </body>
 </html>
