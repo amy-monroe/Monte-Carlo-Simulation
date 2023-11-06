@@ -53,9 +53,9 @@ This project demonstartes the following skills:
 
 - **Data Visualization**: Effectively visualizes data through canvas drawing and real-time updates, enhancing the user experience.
 
-- **User Interface Design**: Includes a user-friendly interface with interactive buttons, demonstrating my skills in user interface (UI) and user experience (UX) design.
+- **User Interface Design**: Includes a user-friendly interface with interactive buttons
 
-- **Performance Optimization**: I utilized real-time updates and interval-based techniques to optimize application performance.
+- **Performance Optimization**: Utilises real-time updates and interval-based techniques to optimize application performance.
 
 - **Event-Driven Programming**: Includes the implementation of event listeners and interactive controls.
 
@@ -63,7 +63,7 @@ This project demonstartes the following skills:
 
 - **Back-End Logic**: I built the back-end logic for this simulation, involving algorithm design, data processing, and managing data structures.
 
-- **Machine Learning Concepts**: Through random data generation and scenario simulations, I touched on concepts relevant to machine learning and reinforcement learning.
+- **Machine Learning Concepts**: Through random data generation and scenario simulations, this project touches on concepts relevant to machine learning and reinforcement learning.
 
 - **Programming**: The project involves the creation of a program that generates random numbers, conducts calculations, and visualizes results. This reflects essential programming concepts, as demonstrated in this web-based simulation using JavaScript.
 
