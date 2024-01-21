@@ -8,7 +8,7 @@ This project serves as an educational example of how a Monte Carlo simulation fu
 
 <br/>
 Although I am a backend engineer, I created this to in Vanilla JavaScript to serve as a visual demonstration of approximating the value of Pi (π) using a Monte Carlo approach.
-<br/
+<br/>
 
 I highly recommed checking out my **Golang Command-line interface (CLI) application** that performs a Monte Carlo simulation which also estimates the value of π. The CLI tool allows users to run simulations and visualise results in a terminal environment. 
 <br/>
