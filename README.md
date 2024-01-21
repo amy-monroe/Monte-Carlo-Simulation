@@ -4,10 +4,11 @@
 [Try the live app here](https://monte-carlo-simulator-demo.netlify.app/)
 ## Overview
 
-This project serves as an educational demonstration of how a Monter Carlo simulation fundamentally works, utilising interaction and visualisation to help users gain a better understanding of the concept.
+This project serves as an educational example of how a Monte Carlo simulation fundamentally works, utilising interaction and visualisation to help users gain a better understanding of the concept.
 
 <br/>
-Although I am a backend engineer, I created this to in Vanilla JavaScript to serve as a visual demonstration of approximating the value of Pi (π) using a Monte Carlo approach that you can look at and interact with in your browser.
+Although I am a backend engineer, I created this to in Vanilla JavaScript to serve as a visual demonstration of approximating the value of Pi (π) using a Monte Carlo approach.
+<br/
 
 I highly recommed checking out my **Golang Command-line interface (CLI) application** that performs a Monte Carlo simulation which also estimates the value of π. The CLI tool allows users to run simulations and visualise results in a terminal environment. 
 <br/>
