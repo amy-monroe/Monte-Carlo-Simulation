@@ -1,6 +1,7 @@
 # Visual Monte Carlo Simulation
+## Live Version
 
-[Deployed Monte Carlo Pi Simulation](https://monte-carlo-simulator-demo.netlify.app/)
+[Try the live app here](https://monte-carlo-simulator-demo.netlify.app/)
 ## Overview
 
 Monte Carlo simulations represent a powerful statistical technique, combining stochastic processes and mathematical modeling to estimate complex scenarios. In this context, stochastic processes involve random, probabilistic phenomena evolving over time or iterations. 
