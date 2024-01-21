@@ -14,7 +14,7 @@ Although I am a backend engineer, I created this to in Vanilla JavaScript to ser
 I highly recommed checking out my **Golang Command-line interface (CLI) application** that performs a Monte Carlo simulation which also estimates the value of π. The CLI tool allows users to run simulations and visualise results in a terminal environment. 
 <br/>
 
-[CLI Monte Carlo Simulation](https://github.com/amy324/Golang-Monte-Carlo-Simulator.git)
+Git Repo: [CLI Monte Carlo Simulation](https://github.com/amy324/Golang-Monte-Carlo-Simulator.git)
 
 <br/>
 
